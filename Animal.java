@@ -10,6 +10,7 @@ public abstract class Animal
     private static final int PUNTOS_DE_VIDA = 100;
     private int puntosDeVida;
     private int peso;
+    private String sonidoCaracteristico;
     
     /**
      * Constructor de la clase Animal
@@ -17,9 +18,10 @@ public abstract class Animal
      * @param puntosDeVida Los puntos de vida del animal
      * @param peso El peso del animal
      */
-    public Animal()
+    public Animal(String sonidoCaracteristico)
     {  
         puntosDeVida = PUNTOS_DE_VIDA;
+        this.sonidoCaracteristico = sonidoCaracteristico;
     }
     
     /**
@@ -28,36 +30,10 @@ public abstract class Animal
     public abstract void comer();
     
     /**
-     * Hace a un animal emitir su sonido caracteristico
-     */
-    public abstract void emitirSonidoCaracteristico();
-    
-    /**
-     * Retorna los puntos de vida del animal
-     */
-    public int getPuntosDeVida(){
-        return puntosDeVida;
-    }
-    
-    /**
-     * Modifica la vida del animal
-     */
-    public void setPuntosDeVida(int nuevosPuntosDeVida){
-        puntosDeVida = nuevosPuntosDeVida;
-    }
-    
-    /**
      * Incrementa los puntos de vida del animal
      */
     public void incrementaPuntosDeVida(int nuevaVida){
         puntosDeVida += nuevaVida;
-    }
-    
-    /**
-     * Retorna la vida del animal
-     */
-    public int getPeso(){
-        return peso;
     }
     
     /**
@@ -74,4 +50,10 @@ public abstract class Animal
         peso = nuevoPeso;
     }
     
+    /**
+     * Hace a un animal emitir su sonido caracteristico
+     */
+    public void emitirSonidoCaracteristico(){
+        System.out.println(sonidoCaracteristico);
+    }
 }

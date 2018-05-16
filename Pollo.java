@@ -8,25 +8,18 @@
 public class Pollo extends Ave implements AnimalVacunable
 {
     private static final int PESO = 1;
+    private static final String SONIDO_CARACTERISTICO = "Pio pio pio pio";
     
     /**
      * Constructor for objects of class Pollo
      * 
      * @param modificadoGeneticamente Mediante un boolean se le indica si es modificado o no
      */
-    public Pollo(boolean modificadoGeneticamente)
+    public Pollo(boolean modificadoGeneticamente, String sonidoCaracteristico)
     {
         //Invocacion al constructor de la clase padre indicandole si es modificable geneticamente
-        super(modificadoGeneticamente);
+        super(modificadoGeneticamente, sonidoCaracteristico);
         setPeso(PESO);
-    }
-    
-    /**
-     * Hace a un animal emitir su sonido caracteristico
-     */
-    @Override
-    public void emitirSonidoCaracteristico(){
-        System.out.println("Pio pio pio pio");
     }
     
     /**

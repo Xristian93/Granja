@@ -6,7 +6,7 @@ import java.util.Random;
  * @author (Cristian de la Fuente)
  * @version (11/05/2018)
  */
-public class Ave extends Animal
+public abstract class Ave extends Animal
 {
     private static final int INCREMENTO_PESO = 1;
     private boolean modificadoGeneticamente = false;
@@ -14,9 +14,9 @@ public class Ave extends Animal
     /**
      * Constructor for objects of class Ave
      */
-    public Ave(boolean modificadoGeneticamente)
+    public Ave(boolean modificadoGeneticamente, String sonidoCaracteristico)
     {
-        super();
+        super(sonidoCaracteristico);
         this.modificadoGeneticamente = modificadoGeneticamente;
     }
 
@@ -42,12 +42,12 @@ public class Ave extends Animal
             incrementaPeso(INCREMENTO_PESO);
             //Si la variable es true entra en el bucle y resta vida al animal.
             if (value){
-                setPuntosDeVida(getPuntosDeVida()-10);
+                incrementaPuntosDeVida(-10);
             }
         }
         else{
             incrementaPeso(INCREMENTO_PESO);
-            setPuntosDeVida(getPuntosDeVida()-10);
+            incrementaPuntosDeVida(-10);
         }
     }
 }
