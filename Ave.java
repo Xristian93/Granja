@@ -8,6 +8,7 @@ import java.util.Random;
  */
 public class Ave extends Animal
 {
+    private static final int INCREMENTO_PESO = 1;
     private boolean modificadoGeneticamente = false;
 
     /**
@@ -38,15 +39,15 @@ public class Ave extends Animal
             Random random = new Random();
             //Obtencion de un valor aleatorio para una variable booleana
             boolean value = random.nextBoolean();
-            super.incrementaPeso(1);
+            incrementaPeso(INCREMENTO_PESO);
             //Si la variable es true entra en el bucle y resta vida al animal.
             if (value){
-                super.incrementaPuntosDeVida(-10);
+                setPuntosDeVida(getPuntosDeVida()-10);
             }
         }
         else{
-            super.incrementaPeso(1);
-            super.incrementaPuntosDeVida(-10);
+            incrementaPeso(INCREMENTO_PESO);
+            setPuntosDeVida(getPuntosDeVida()-10);
         }
     }
 }

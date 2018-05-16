@@ -16,7 +16,7 @@ public class Cerdo extends Mamifero implements AnimalVacunable
     {
         //Invocacion al constructor de la clase padre indicandole la calidad de la raza y el peso
         super(calidadRaza);
-        super.setPeso(PESO);
+        setPeso(PESO);
     }
 
     /**
@@ -32,6 +32,6 @@ public class Cerdo extends Mamifero implements AnimalVacunable
      */
     @Override
     public void vacunar(){
-        super.incrementaPuntosDeVida(20);
+        incrementaPuntosDeVida(20);
     }
 }

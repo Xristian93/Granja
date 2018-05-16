@@ -40,6 +40,13 @@ public abstract class Animal
     }
     
     /**
+     * Modifica la vida del animal
+     */
+    public void setPuntosDeVida(int nuevosPuntosDeVida){
+        puntosDeVida = nuevosPuntosDeVida;
+    }
+    
+    /**
      * Incrementa los puntos de vida del animal
      */
     public void incrementaPuntosDeVida(int nuevaVida){
@@ -66,4 +73,5 @@ public abstract class Animal
     public void setPeso(int nuevoPeso){
         peso = nuevoPeso;
     }
+    
 }

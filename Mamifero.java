@@ -7,6 +7,7 @@
  */
 public class Mamifero extends Animal
 {
+    private static final int INCREMENTO_PESO = 2;
     private int calidadRaza;
 
     /**
@@ -27,10 +28,10 @@ public class Mamifero extends Animal
      */
     @Override
     public void comer(){
-        super.incrementaPuntosDeVida(-10);
-        super.incrementaPeso(2);
+        setPuntosDeVida(getPuntosDeVida()-10);
+        incrementaPeso(INCREMENTO_PESO);
         if (calidadRaza >= 5){
-            super.incrementaPuntosDeVida(-(10-calidadRaza));
+            setPuntosDeVida(getPuntosDeVida()-(10-calidadRaza));
         }
     }
     

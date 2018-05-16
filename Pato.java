@@ -7,7 +7,7 @@
  */
 public class Pato extends Ave
 {
-    private boolean modificadoGeneticamente = false;
+    private static final int PESO = 2;
 
     /**
      * Constructor for objects of class Pato
@@ -18,12 +18,12 @@ public class Pato extends Ave
     {
         //Invocacion al constructor de la clase padre indicandole si es modificable geneticamente
         super(modificadoGeneticamente);
+        setPeso(PESO);
     }
 
     /**
      * Hace a un animal emitir su sonido caracteristico
      */
-
     public void emitirSonidoCaracteristico(){
         System.out.println("Cua cua cua cua");
     }

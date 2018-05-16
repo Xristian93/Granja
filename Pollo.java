@@ -7,6 +7,7 @@
  */
 public class Pollo extends Ave implements AnimalVacunable
 {
+    private static final int PESO = 1;
     
     /**
      * Constructor for objects of class Pollo
@@ -17,6 +18,7 @@ public class Pollo extends Ave implements AnimalVacunable
     {
         //Invocacion al constructor de la clase padre indicandole si es modificable geneticamente
         super(modificadoGeneticamente);
+        setPeso(PESO);
     }
     
     /**
@@ -32,6 +34,6 @@ public class Pollo extends Ave implements AnimalVacunable
      */
     @Override
     public void vacunar(){
-        super.incrementaPuntosDeVida(10);
+        incrementaPuntosDeVida(10);
     }
 }
